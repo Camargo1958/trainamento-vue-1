@@ -2,15 +2,17 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import PessoaFisicaListar from '@/app/pessoa-fisica/listar.vue';
 import PessoaFisicaCriar from '@/app/pessoa-fisica/criar.vue';
+import PessoaFisicaEditar from '@/app/pessoa-fisica/editar.vue';
+import NotFound from '@/support/layout/not-found.vue';
 
 Vue.use(Router);
 
-export default new Router({
+const route = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '',
+      path: '/pessoa',
       component: PessoaFisicaListar,
       name: 'PessoaFisicaListar',
       meta: {
@@ -18,12 +20,26 @@ export default new Router({
       },
     },
     {
-      path: '/criar',
+      path: '/pessoa/criar',
       component: PessoaFisicaCriar,
       name: 'PessoaFisicaCriar',
       meta: {
         title: 'Criar pessoa física',
       },
     },
+    {
+      path: '/pessoa/:id',
+      component: PessoaFisicaEditar,
+      name: 'PessoaFisicaEditar',
+      meta: {
+        title: 'Editar pessoa física',
+      },
+    },
+    {
+      path: '*',
+      component: NotFound,
+      name: 'NotFound',
+    },
   ],
 });
+export default route;
