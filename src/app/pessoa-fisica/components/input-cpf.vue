@@ -1,4 +1,5 @@
 <template lang="pug">
+  .input-cpf
     v-text-field(
       v-model="cpf"
       label="C.P.F."
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+
 export default {
   props: {
     value: {

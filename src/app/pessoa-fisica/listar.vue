@@ -25,7 +25,7 @@ export default {
       headers: [],
       items: [],
       rowsPerPageItems: [
-        25, 50, 100
+        25, 50, 100,
       ],
     };
   },
@@ -36,4 +36,3 @@ export default {
   },
 };
 </script>
-
