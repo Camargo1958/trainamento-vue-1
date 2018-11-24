@@ -1,6 +1,7 @@
 import Vue from 'vue';
+import './support/plugins/vuetify';
 import App from './App.vue';
-import router from './router';
+import router from './router/router';
 
 Vue.config.productionTip = false;
 
