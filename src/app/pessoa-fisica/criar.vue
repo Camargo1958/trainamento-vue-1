@@ -56,8 +56,8 @@ export default {
         return;
       }
       FisicaService.save(this.payload)
-        .then(({ data }) => {
-          console.log('data', data);
+        .then(() => {
+          this.$router.push({ name: 'PessoaFisicaListar' });
         });
     },
   },
